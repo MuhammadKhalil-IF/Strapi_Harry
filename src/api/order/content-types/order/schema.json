@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "uid",
+      "default": "order_id",
+      "required": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Pending",
+        "Successful",
+        "Reject"
+      ],
+      "required": true,
+      "default": "Active"
+    },
+    "Payment": {
+      "type": "biginteger"
+    },
+    "OrderInfo": {
+      "type": "json"
+    }
+  }
+}
